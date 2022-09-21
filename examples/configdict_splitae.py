@@ -1,0 +1,28 @@
+confignet = {
+        'net_id': 'test_split-ae',
+        'dataset': ['data_set_path',],
+        'probsamp': [None,],
+        'shapelist': [3500,],
+        'temp_list': [None], #[5,24578,3]
+        'content_label': [None],
+        'out_data':  None,
+        'training_batch_size': 50,
+        'test_batch_size': 50,
+        'pc_size': 24578,
+        'latent_layer': 5,
+        'alpha': 0.03,
+        'beta': 0.1,
+        'class_layers': [25,],
+        'encoder_layers': [64, 128, 128, 256],
+        'decoder_layers': [256, 256],
+        'mlp_content_layers': [25, 2],
+        'mlp_style_layers': [25, 6],
+        'l_rate': 5e-4,
+        'epochs_max': 700,
+        'stop_training': 1e-06,
+        'frac_training': 0.9,
+        'autosave_rate': 10,
+        'alpha1': 1e3,
+        'alpha2': 1e-3,
+        'dpout': 1.0
+        }
