@@ -1994,16 +1994,12 @@ class arch_training:
         <array, (2,)>
 
         Output:
-        - B: Tensor with the coefficients of the tri-variate Bernstein
-        polynomials for each template.
-        Type <array, (-1, pc_size, number_control_points)
-        - V0: Tensor with the coordinates of the control points for each
-        parameterized template.
-        Type <array, (n_templates,number_control_points,3)>
+
         - pcs_t: Tensor with the point clouds of the parameterized
         templates. Type <tensor, (n_templates,pc_size,3)>
         - ind_t: Tensor with the indeces of the templates.
         Type <tensor, (n_templates)>
+        - c_label: one hot encoding class labels of the input shapes
         '''
 
         ## Load mesh templates
@@ -3636,7 +3632,7 @@ class SplitAE:
           - S_out: Reconstructed  point cloud. Type <tensor (-1, pc_size, 3)>
           - class_prob_s:
           - class_label_c:
-          - class_prob_s:
+          - class_prob_c:
         '''
         # Encoder
         S_in, c_enc_w, c_enc_b = SplitAE. \
